@@ -1,0 +1,16 @@
+[Unit]
+Description=getting runtime config as fs_overlay file from persistence partition
+Before=basic.target
+ConditionKernelCommandLine=xrtcrepo=persist
+ConditionPathExists=/etc/environment
+After=rtc.service
+DefaultDependencies=no
+JobTimeoutSec=15
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/rtc_persist
+RemainAfterExit=yes
+
+[Install]
+WantedBy=basic.target

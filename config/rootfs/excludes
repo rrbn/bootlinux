@@ -1,0 +1,3 @@
+chroot/boot/*
+chroot/vmlinuz*
+chroot/initrd*

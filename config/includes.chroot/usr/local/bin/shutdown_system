@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# shutdown_system
+#
+
+pkill start_browser
+pkill chromium
+sleep 1
+systemctl -ff poweroff -f

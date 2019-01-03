@@ -1,0 +1,22 @@
+#!/bin/bash
+
+OPTS=""
+CMD="/usr/bin/chromium"
+
+if [ ! -z "${xbrowser}" ]
+then
+	CMD="${xbrowser}"
+fi
+
+if [ ! -z "${xbrowseropts}" ]
+then
+	# replace options "," with " ".
+	OPTS="${xbrowseropts//,/ }"
+fi
+
+while :
+do
+    #/usr/bin/chromium --app-id=eaehfoockgkpomnaegammbjnoijmhnma
+    #/usr/bin/chromium --user-data-dir=/data/seb3/chromium-userdata --app-id=eaehfoockgkpomnaegammbjnoijmhnma
+    ${CMD} ${OPTS}
+done

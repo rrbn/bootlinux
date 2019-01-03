@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+	--memtest "none" \
+	--binary-images "netboot" \
+	--bootappend-live "boot=live components config locales=de_DE.UTF-8 keyboard-layouts=de username=npuser" \
+	--debootstrap-options "--variant=minbase" \
+	--archive-areas "main contrib non-free" \
+	--bootloader "syslinux" \
+	--apt-recommends "false" \
+	--apt-indices "false" \
+	"${@}"

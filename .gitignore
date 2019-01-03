@@ -1,0 +1,11 @@
+binary/
+live-*
+tftpboot/
+.build
+build.log
+cache/
+chroot/
+chroot.*
+tftpboot/
+*.bc
+tmp

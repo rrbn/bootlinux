@@ -1,0 +1,13 @@
+#!/bin/sh
+
+FS_OVERLAY="/lib/live/mount/persistence/sda2/fs_overlay"
+
+PersistLoad() {
+	echo "try to load fs_overlay from persistence partition..."
+    if [ -d "${FS_OVERLAY}" ] ; then
+        echo "${FS_OVERLAY} found..."
+        cp -r $FS_OVERLAY/* /
+    fi
+}
+
+PersistLoad
