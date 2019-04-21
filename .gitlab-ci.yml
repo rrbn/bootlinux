@@ -1,5 +1,4 @@
 image: registry.gitlab.com/eqsoft/bootlinux-docker:latest
-
 build:
         script: ./build.sh
         only:
