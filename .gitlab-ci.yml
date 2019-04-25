@@ -2,11 +2,9 @@ image: registry.gitlab.com/eqsoft/bootlinux-docker:latest
 
 build:
         script: ./build.sh
-        only:
-            variables:
-                - $CI_COMMIT_MESSAGE =~ /CI_BUILD/
+	when: manual
+
         artifacts:
             name: "filesystem_$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
             paths: 
                 - binary/live/filesystem.squashfs
-            expire_in: 10 day
