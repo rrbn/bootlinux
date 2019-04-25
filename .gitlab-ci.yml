@@ -1,8 +1,9 @@
 build:
         image: docker:git
-        services: docker:dind
+        services: 
+               - docker:dind
         script: 
-            - docker run --privileged --mount type=bind,source="$(pwd)",target=/build registry.gitlab.com/eqsoft/bootlinux-docker:latest /bin/bash -c 'cd /build; ./build.sh'
+               - docker run --privileged --mount type=bind,source="$(pwd)",target=/build registry.gitlab.com/eqsoft/bootlinux-docker:latest /bin/bash -c 'cd /build; ./build.sh'
         when: manual
         artifacts:
             name: "filesystem_$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
