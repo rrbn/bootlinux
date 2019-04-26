@@ -4,5 +4,5 @@ docker run --privileged \
     --rm \
     --name "bootlinux-cont" \
     --mount type=bind,source="$(pwd)",target=/build \
-    registry.gitlab.com/eqsoft/bootlinux-docker:latest \
+    registry.gitlab.com/eqsoft/bootlinux-docker:stretch \
     /bin/bash -c 'cd /build; ./build.sh'
