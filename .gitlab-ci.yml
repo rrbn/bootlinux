@@ -1,4 +1,4 @@
-image: registry.gitlab.com/eqsoft/bootlinux-docker:latest
+image: registry.gitlab.com/eqsoft/bootlinux-docker:stretch
 
 build:
         script: ./build.sh
