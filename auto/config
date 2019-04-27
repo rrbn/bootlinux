@@ -7,7 +7,7 @@ lb config noauto \
 	--binary-images "netboot" \
 	--bootappend-live "boot=live components config locales=de_DE.UTF-8 keyboard-layouts=de username=npuser" \
 	--debootstrap-options "--variant=minbase" \
-	--distribution "stretch"
+	--distribution "stretch" \
 	--archive-areas "main contrib non-free" \
 	--bootloader "syslinux" \
 	--apt-recommends "false" \
