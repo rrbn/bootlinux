@@ -17,7 +17,7 @@
 
 * requires Linux "Debian Linux Stretch"
 * apt-get install live-build live-boot live-config build-essentials squashfs-tools syslinux
-    see reference Dockerfile: https://gitlab.com/eqsoft/bootlinux-docker/blob/stretch/bootlinux/Dockerfile
+* see reference Dockerfile: https://gitlab.com/eqsoft/bootlinux-docker/blob/stretch/bootlinux/Dockerfile
 * execute ```./build.sh```
 
 ## Build Requirements (docker) ##
@@ -29,7 +29,7 @@
 ## Usage
 
 * Main build artefact (local and docker): ```binary/live/filesystem.squashfs```
-* Main build artefact (gitlab-ci, manual trigger): ```gitlab: https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/stretch/download?job=build```
+* Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/stretch/download?job=build```
 * For embedding in a boot environment see:
     * https://gitlab.com/eqsoft/bootlinux-image
     * https://gitlab.com/eqsoft/seb3
@@ -93,6 +93,7 @@ In any case the repos must deliver a root folder "fs_overlay/*" which contains t
     * A git repo with fs_overlay folder is tried to be cloned from **xgiturl** and branch **xrtcbranch**
     * If **xrtchost** kernel param is not empty the clients hostname is used as branch name
     * There must be a private /etc/ssh/id_rsa key with password of xrtcagent parameter
+    * The pubkey must be registered for accessing the git repo
     * **Note**: boot files are not encrypted. For more security xrtcagent string should be embedded into a precompiled ipxe.krn and chainloaded.
 
 ### xexit ###
