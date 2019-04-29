@@ -71,7 +71,7 @@ show | hide a panel with a clock at the bottom of the screen
 xrtcrepo="e**x**tended **r**un**t**ime **c**onfiguration **repo**sitory"
 
 It provides three ways to add or override ressources in the root filesystem at boot-time. 
-With xrtcrepo the linux runtime can be dynamically altered without changing the read-only filesystem.squashfs
+With xrtcrepo the linux runtime can be dynamically altered without changing the read-only filesystem.squashfs.
 In any case the repos must deliver a root folder "fs_overlay/*" which contains the ressources for copying to the rootfs.
 
 * **persist**
@@ -82,28 +82,24 @@ In any case the repos must deliver a root folder "fs_overlay/*" which contains t
 
 * **tgz**
 
-*   **requires**: **xtgzurl**, web-ressource: xtgzurl/(xrtcbranch|xrtchost)?/fs_overlay.tgz
+    * requires: **xtgzurl**, web-ressource: xtgzurl/(xrtcbranch|xrtchost)?/fs_overlay.tgz
     * A web ressource "fs_overlay.tgz" (as tar.gz file) is tried to be downloaded from **xtgzurl**, unpacked and copyied fs_overlay/* to rootfs.
     * If **xrtcbranch** kernel param is not empty the ressource url should be: xtgzurl/xrtcbranch/fs_overlay.tgz
     * If **xrtchost** kernel param is not empty the ressource url should be: xtgzurl/HOSTNAME_OF_CLIENT/fs_overlay.tgz
 
 * **git**
 
-    * **requires**: **xgiturl**, (**xrtcbranch** | **xrtchost**), **xrtcagent**, **/etc/ssh/id_rsa** with password xrtcagent parameter
+    * requires: **xgiturl**, (**xrtcbranch** | **xrtchost**), **xrtcagent**, **/etc/ssh/id_rsa** with password xrtcagent parameter
     * A git repo with fs_overlay folder is tried to be cloned from **xgiturl** and branch **xrtcbranch**
     * If **xrtchost** kernel param is not empty the clients hostname is used as branch name
     * There must be a private /etc/ssh/id_rsa key with password of xrtcagent parameter
     * **Note**: boot files are not encrypted. For more security xrtcagent string should be embedded into a precompiled ipxe.krn and chainloaded.
 
 ### xexit ###
-
-**requires**: xpanel=1
-
-shows an exit icon in panel which reloads the openbox-session
+* requires: xpanel=1
+* shows an exit icon in panel which reloads the openbox-session
 
 ### xterminal ###
-
-**requires**: xpanel=1
-
-shows xterminal icon
+* requires: xpanel=1
+* shows xterminal icon
 
