@@ -9,3 +9,8 @@ chroot.*
 tftpboot/
 *.bc
 tmp
+config/binary
+config/bootstrap
+config/build
+config/chroot
+
