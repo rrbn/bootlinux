@@ -6,23 +6,17 @@
     * https://gitlab.com/eqsoft/seb3
 
 ## Branches
-* The default branch is "buster". 
+* The default branch is "buster". This is "stretch" branch.
 
-Don't be confused about the reference in .gitlab-ci.yml
-```
-image: registry.gitlab.com/eqsoft/bootlinux-docker:stretch
-````
-The buster artefacts must be build within a stretch based docker environment. The buster docker image fails with gitlab docker executor.
+## Download Pre-build filesystem.squashfs (stretch) ##
 
-## Download Pre-build filesystem.squashfs (buster) ##
-
-* You can donwload the latest build from gitlab: https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster/download?job=build
+* You can donwload the latest build from gitlab: https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/stretch-latest/download?job=build
 
 ## Build Requirements (local) ##
 
 * requires Linux "Debian Linux Stretch or Buster"
 * apt-get install live-build live-boot live-config build-essentials squashfs-tools syslinux
-* see reference Dockerfile: https://gitlab.com/eqsoft/bootlinux-docker/blob/buster/bootlinux/Dockerfile
+* see reference Dockerfile: https://gitlab.com/eqsoft/bootlinux-docker/blob/stretch/bootlinux/Dockerfile
 * execute ```./build.sh```
 
 ## Build Requirements (docker) ##
@@ -34,7 +28,7 @@ The buster artefacts must be build within a stretch based docker environment. Th
 ## Usage
 
 * Main build artefact (local and docker): ```binary/live/filesystem.squashfs```
-* Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster/download?job=build```
+* Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/stretch-latest/download?job=build```
 * For embedding in a boot environment see:
     * https://gitlab.com/eqsoft/bootlinux-docker
     * https://gitlab.com/eqsoft/seb3
