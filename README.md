@@ -2,7 +2,7 @@
 
 * A customizable webkiosk filesystem based on Debian-Live (stretch) and chromium
 * This is **not** a standalone product but a generic part of other projects. See for further documentation:
-    * https://gitlab.com/eqsoft/bootlinux-image
+    * https://gitlab.com/eqsoft/bootlinux-docker
     * https://gitlab.com/eqsoft/seb3
 
 ## Branches
@@ -31,7 +31,7 @@
 * Main build artefact (local and docker): ```binary/live/filesystem.squashfs```
 * Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/stretch/download?job=build```
 * For embedding in a boot environment see:
-    * https://gitlab.com/eqsoft/bootlinux-image
+    * https://gitlab.com/eqsoft/bootlinux-docker
     * https://gitlab.com/eqsoft/seb3
 * After booting into the webkiosk linux a chromium browser is started in an openbox-session
 
