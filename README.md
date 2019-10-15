@@ -16,7 +16,7 @@ The buster artefacts must be build within a stretch based docker environment. Th
 
 ## Download Pre-build filesystem.squashfs (buster) ##
 
-* You can donwload the latest build from gitlab: https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster/download?job=build
+* You can donwload the latest build from gitlab: https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster-latest/download?job=build
 
 ## Build Requirements (local) ##
 
@@ -34,7 +34,7 @@ The buster artefacts must be build within a stretch based docker environment. Th
 ## Usage
 
 * Main build artefact (local and docker): ```binary/live/filesystem.squashfs```
-* Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster/download?job=build```
+* Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster-latest/download?job=build```
 * For embedding in a boot environment see:
     * https://gitlab.com/eqsoft/bootlinux-docker
     * https://gitlab.com/eqsoft/seb3
