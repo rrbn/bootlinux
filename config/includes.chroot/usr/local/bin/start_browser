@@ -1,12 +1,43 @@
 #!/bin/bash
 
 OPTS=""
-CMD="/usr/bin/chromium"
+PROFILE="/home/${username}/browser_profile"
+OVERLAY_PROFILE=""
+CMD=""
+CONFIG=""
+FIREFOX="firefox"
 
-if [ ! -z "${xbrowser}" ]
+if [ ! -d "${PROFILE}" ]
 then
-	CMD="${xbrowser}"
+	mkdir "${PROFILE}"
 fi
+
+if [ "${xbrowser}" == "firefox" ]
+then
+	OVERLAY_PROFILE="/etc/${FIREFOX}/profile/*"
+	CMD="${FIREFOX}"
+fi
+
+if [ "${xbrowser}" == "seb2" ]
+then
+	CONFIG="/etc/seb2/config.json"
+	OVERLAY_PROFILE="/etc/seb2/profile/*"
+        CMD="${FIREFOX} -app /opt/seb2/browser/app/seb.ini -config ${CONFIG}"
+fi
+
+if [ -z "${CMD}" ]
+then
+	echo "No browser defined"
+	exit 0
+fi
+
+# populate browser profile
+${CMD} -silent -profile ${PROFILE}
+
+sleep 2
+
+# copy custom profile files
+cp -a ${OVERLAY_PROFILE} ${PROFILE}
 
 if [ ! -z "${xbrowseropts}" ]
 then
@@ -14,9 +45,6 @@ then
 	OPTS="${xbrowseropts//,/ }"
 fi
 
-while :
-do
-    #/usr/bin/chromium --app-id=eaehfoockgkpomnaegammbjnoijmhnma
-    #/usr/bin/chromium --user-data-dir=/data/seb3/chromium-userdata --app-id=eaehfoockgkpomnaegammbjnoijmhnma
-    ${CMD} ${OPTS}
+while [ ! $(pidof "${FIREFOX}") ] ; do
+	${CMD} -profile ${PROFILE} ${OPTS}
 done
