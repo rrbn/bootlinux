@@ -1,5 +1,4 @@
 pulseaudio
-gstreamer1.0-pulseaudio
 alsa-tools 
 alsa-tools-gui 
 alsa-utils 

@@ -14,6 +14,7 @@ wget http://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/linux-$(uname -m)/de/
 tar -xjf firefox-52.9.0esr.tar.bz2 
 mv firefox /opt/
 ln -s /opt/firefox/firefox /usr/bin/firefox
+rm firefox-52.9.0esr.tar.bz2
 
 # fetch seb2 repo
 

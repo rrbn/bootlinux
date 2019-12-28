@@ -1,0 +1,8 @@
+Package: *ffmpeg*
+Pin: release n=stretch
+Pin-Priority: 1001
+
+Package: *ffmpeg*
+Pin: release n=buster
+Pin-Priority: -1
+
