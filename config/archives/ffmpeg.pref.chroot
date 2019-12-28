@@ -1,3 +1,0 @@
-Package: ffmpeg
-Pin: release a=stretch
-Pin-Priority: 1001

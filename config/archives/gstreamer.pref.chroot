@@ -1,0 +1,8 @@
+Package: *gstreamer*
+Pin: release n=stretch
+Pin-Priority: 1001
+
+Package: *gstreamer*
+Pin: release n=buster
+Pin-Priority: -1
+
