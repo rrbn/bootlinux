@@ -9,3 +9,4 @@ start_xscreensaver_watch &
 sudo flush_logs &
 sudo lock_cmdline &
 start xbacklight
+start_audio &
