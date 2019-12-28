@@ -13,7 +13,8 @@
 	"layout.spellcheckDefault" : 2,
 	"spellchecker.dictionary": "de-DE",
 	"extensions.ui.dictionary.hidden": false,
-	"layout.css.devPixelsPerPx": "-1.0"
+	"layout.css.devPixelsPerPx": "-1.0",
+	"media.libavcodec.allow-obsolete":true
 },
 "sebPrefsMap": {
 	"general.useragent.override" 	: "browserUserAgent",
