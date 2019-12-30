@@ -1,26 +1,10 @@
 # bootlinux
 
-* A customizable webkiosk filesystem based on Debian-Live (stretch) and chromium
-* This is **not** a standalone product but a generic part of other projects. See for further documentation:
-    * https://gitlab.com/eqsoft/bootlinux-docker
-    * https://gitlab.com/eqsoft/seb3
-
-## Branches
-* The default branch is "buster". 
-
-Don't be confused about the reference in .gitlab-ci.yml
-```
-image: registry.gitlab.com/eqsoft/bootlinux-docker:stretch
-````
-The buster artefacts must be build within a stretch based docker environment. The buster docker image fails with gitlab docker executor.
-
-## Download Pre-build filesystem.squashfs (buster) ##
-
-* You can donwload the latest build from gitlab: https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster-latest/download?job=build
+* A customizable webkiosk filesystem based on Debian-Live (Debian 10 / buster) and seb2 Kiosk-Browser [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)
 
 ## Build Requirements (local) ##
 
-* requires Linux "Debian Linux Stretch or Buster"
+* requires Linux "Debian 9 / stretch or Debian 10 / buster"
 * apt-get install live-build live-boot live-config build-essentials squashfs-tools syslinux
 * see reference Dockerfile: https://gitlab.com/eqsoft/bootlinux-docker/blob/buster/bootlinux/Dockerfile
 * execute ```./build.sh```
@@ -30,15 +14,15 @@ The buster artefacts must be build within a stretch based docker environment. Th
 * requires docker on a Linux host (it does not work in OSX or Windows hosts)
 * build within a prebuild docker image: ```./build-docker.sh```
 * the build-docker script executes the build script in docker environment and saves the created artefacts in the local working directory
+* the build scripts should be executed as root user
 
 ## Usage
 
-* Main build artefact (local and docker): ```binary/live/filesystem.squashfs```
-* Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster-latest/download?job=build```
-* For embedding in a boot environment see:
-    * https://gitlab.com/eqsoft/bootlinux-docker
-    * https://gitlab.com/eqsoft/seb3
-* After booting into the webkiosk linux a chromium browser is started in an openbox-session
+* Main build artefact (local and docker): ```binary/live/(filesystem.squashfs,initrd.img,vmlinuz)```
+* Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster-seb2/download?job=build```
+* To save some space the unused boot files vmlinuz and initrd.img are extracted from the filesystem.squashfs
+* The artefacts are tested in a syslinux environment with bios and uefi firmware like described here: [https://wiki.debian-fr.xyz/PXE_avec_support_EFI](https://wiki.debian-fr.xyz/PXE_avec_support_EFI)
+* After booting into the webkiosk linux the seb2 browser should start in an openbox-session
 
 ## Documentation
 
@@ -49,12 +33,17 @@ The buster artefacts must be build within a stretch based docker environment. Th
 
 ## Custom kernel parameters ##
 
+### xbrowser (seb2|firefox) ###
+* ```xbrowser=firefox``` : locked-down firefox is started (see `config/includes.chroot/etc/firefox/*` for lockdown configs.)
+* ```xbrowser=seb2``` : seb2 is started
+
 ### xbrowseropts (string: comma seperated list) ###
 
-A comma seperated list of chromium browser options p.e.:
-* ```xbrowseropts=xbrowseropts=https://gitlab.com/eqsoft/bootlinux```
-* ```xbrowseropts=xbrowseropts=--kiosk,--incognito,https://gitlab.com/eqsoft/bootlinux```
-* full list of chromium commandline options: https://peter.sh/experiments/chromium-command-line-switches/
+A comma seperated list of options (depends on xbrowser paramater):
+* ```xbrowser=seb2 xbrowseropts=-url,https://gitlab.com/eqsoft/bootlinux,-purgecaches,-no-remote```
+* full list of seb2 commanline options: [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)
+* ```xbrowser=firefox xbrowseropts=-url,https://gitlab.com/eqsoft/bootlinux,-private```
+* full list of firefox commandline options: [https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)
 
 ### xpanel (0|1) ###
 
@@ -109,3 +98,6 @@ In any case the repos must deliver a root folder "fs_overlay/*" which contains t
 * requires: xpanel=1
 * shows xterminal icon
 
+### xaudio (0|1) ###
+* ```xaudio=1``` : a pulseaudio server is started and master volume is set to 100%
+* ```xaudio=0``` : pulseaudio server is not started, master volume is 0%

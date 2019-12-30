@@ -15,6 +15,8 @@ tar -xjf firefox-52.9.0esr.tar.bz2
 mv firefox /opt/
 ln -s /opt/firefox/firefox /usr/bin/firefox
 rm firefox-52.9.0esr.tar.bz2
+cp /etc/firefox/firefox.cfg /opt/firefox/
+cp /etc/firefox/autoconfig.js /opt/firefox/defaults/pref/
 
 # fetch seb2 repo
 
