@@ -1,6 +1,7 @@
 #!/bin/sh
 
-FS_OVERLAY="/lib/live/mount/persistence/sda2/fs_overlay"
+DEVICE=$(findfs LABEL=persistence | sed 's/\/dev\///')
+FS_OVERLAY="/lib/live/mount/persistence/$DEVICE/fs_overlay"
 
 PersistLoad() {
 	echo "try to load fs_overlay from persistence partition..."
