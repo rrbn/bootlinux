@@ -1,10 +1,8 @@
 #!/bin/bash
-if [ "${xaudio}" == "1" ]
-then
-	pulseaudio --kill
-	pulseaudio --daemonize
-	#pactl set-sink-mute 0 0
-	#pactl set-sink-volume 0 100%
-	sleep 5
-	amixer -q -D pulse sset Master 100%
-fi
+exec /usr/bin/pulseaudio --start
+#pulseaudio --kill
+#pulseaudio --daemonize
+#pactl set-sink-mute 0 0
+#pactl set-sink-volume 0 100%
+#sleep 10
+#amixer -q -D pulse sset Master 100%

@@ -1,5 +1,6 @@
 set_mouse_speed &
 set_noblank &
+start_audio &
 start_numlock &
 start_xscreensaver &
 start_feh &
@@ -7,6 +8,5 @@ start_panel &
 start_browser &
 start_xscreensaver_watch &
 start xbacklight &
-start_audio &
 sudo flush_logs &
 sudo lock_cmdline &
