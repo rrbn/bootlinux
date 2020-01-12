@@ -1,0 +1,7 @@
+.include /etc/pulse/default.pa
+
+# Set volume to 50% on boot
+# set-sink-volume 0 32768
+
+# Set volume to 100% on boot
+set-sink-volume 0 65536
