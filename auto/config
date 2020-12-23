@@ -12,4 +12,5 @@ lb config noauto \
 	--bootloader "syslinux" \
 	--apt-recommends "false" \
 	--apt-indices "false" \
+	--security "false" \
 	"${@}"
