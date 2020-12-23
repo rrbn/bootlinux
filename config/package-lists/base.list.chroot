@@ -25,3 +25,7 @@ numlockx
 nfs-common
 expect
 xbacklight
+xterm
+psmisc
+console-data
+console-setup
