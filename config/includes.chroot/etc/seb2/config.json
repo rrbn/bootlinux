@@ -10,10 +10,18 @@
 "sebPdfJsEnabled":true,
 "sebPrefs": {
 	"network.proxy.type" 	: 0,
-	"layout.spellcheckDefault" : 2,
+	"layout.spellcheckDefault" : 0,
 	"spellchecker.dictionary": "de-DE",
 	"extensions.ui.dictionary.hidden": false,
 	"layout.css.devPixelsPerPx": "-1.0",
+    "mousewheel.default.action": 1,
+    "mousewheel.with_alt.action": 1,
+    "mousewheel.with_control.action": 3,
+    "mousewheel.with_meta.action": 1,
+    "mousewheel.with_shift.action": 1,
+    "mousewheel.with_win.action": 1,
+    "browser.urlbar.autoFill":false,
+    "browser.urlbar.autoFill.typed":false,
 	"media.libavcodec.allow-obsolete":true
 },
 "sebPrefsMap": {
@@ -88,7 +96,7 @@
 "sendBrowserExamKey":true,
 "showReloadWarning" : true,
 "showTaskBar":false,
-"startURL":"https://github.com/eqsoft/netpoint9",
+"startURL":"https://gitlab.com/eqsoft/bootlinux",
 "taskBarHeight":0,
 "touchOptimized":false,
 "urlFilterTrustedContent":false,
