@@ -7,6 +7,5 @@ start_feh &
 start_panel &
 start_browser &
 start_xscreensaver_watch &
-start xbacklight &
 sudo flush_logs &
 sudo lock_cmdline &
