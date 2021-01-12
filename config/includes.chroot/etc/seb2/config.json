@@ -22,6 +22,9 @@
 	"mousewheel.with_win.action": 1,
 	"browser.urlbar.autoFill":false,
 	"browser.urlbar.autoFill.typed":false,
+	"signon.autofillForms":false,
+	"signon.autofillForms.http":false,
+	"browser.formfill.enable":false,
 	"media.libavcodec.allow-obsolete":true
 },
 "sebPrefsMap": {
