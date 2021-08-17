@@ -6,6 +6,8 @@ OVERLAY_PROFILE=""
 CMD=""
 CONFIG=""
 FIREFOX="firefox"
+CHROMIUM="chromium"
+
 
 if [ ! -d "${PROFILE}" ]
 then
@@ -16,6 +18,11 @@ if [ "${xbrowser}" == "firefox" ]
 then
 	OVERLAY_PROFILE="/etc/${FIREFOX}/profile/*"
 	CMD="${FIREFOX}"
+fi
+
+if [ "${xbrowser}" == "chromium" ]
+then
+        CMD="${CHROMIUM}"
 fi
 
 if [ "${xbrowser}" == "seb2" ]
@@ -32,12 +39,12 @@ then
 fi
 
 # populate browser profile
-${CMD} -silent -profile ${PROFILE}
+#${CMD} -silent -profile ${PROFILE}
 
 sleep 2
 
 # copy custom profile files
-cp -a ${OVERLAY_PROFILE} ${PROFILE}
+#cp -a ${OVERLAY_PROFILE} ${PROFILE}
 
 if [ ! -z "${xbrowseropts}" ]
 then
@@ -46,5 +53,9 @@ then
 fi
 
 while [ ! $(pidof "${FIREFOX}") ] ; do
-	${CMD} -profile ${PROFILE} ${OPTS}
+	${CMD} ${OPTS}
+done
+
+while [ ! $(pidof "${CHROMIUM}") ] ; do
+        ${CMD} ${OPTS}
 done
