@@ -43,7 +43,7 @@
 
 A comma seperated list of options (depends on xbrowser paramater):
 * ```xbrowser=seb2 xbrowseropts=-url,https://gitlab.com/eqsoft/bootlinux,-purgecaches,-no-remote```
-_    * _full list of seb2 commanline options: [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)_
+ * _full list of seb2 commanline options: [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)_
 
 * ```xbrowser=firefox xbrowseropts=-url,https://gitlab.com/eqsoft/bootlinux,-private```
     * _ full list of firefox commandline options: [https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)_
