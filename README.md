@@ -50,7 +50,7 @@ A comma seperated list of options (depends on xbrowser paramater):
 
 * ```xbrowser=chromium xbrowseropts=-url,xbrowseropts=https://gitlab.com/eqsoft/bootlinux,--start-fullscreen,--kiosk,--incognito,--noerrdialogs,--disable-translate,--no-first-run,--fast,--fast-start,--disable-infobars,--disable-features=Translate```
     * _full list of chromium commanline options: [https://peter.sh/experiments/chromium-command-line-switches/](https://peter.sh/experiments/chromium-command-line-switches/)_
-    * _father Chrome Flags for Tooling: [https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tools.md](https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tools.md)_
+    * _further chrome flags for tooling: [https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tools.md](https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tools.md)_
 
 
 ### xpanel (0|1) ###
