@@ -33,7 +33,7 @@
 
 ## Custom kernel parameters ##
 
-### xbrowser (seb2|firefox) ###
+### xbrowser (seb2|firefox|chromiun) ###
 * ```xbrowser=firefox``` : locked-down firefox is started (see `config/includes.chroot/etc/firefox/*` for lockdown configs.)
 * ```xbrowser=seb2``` : seb2 is started
 * ```xbrowser=chromium``` : chromium is started
