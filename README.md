@@ -48,7 +48,7 @@ A comma seperated list of options (depends on xbrowser paramater):
 * full list of firefox commandline options: [https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)
 
 * ```xbrowser=chromium xbrowseropts=-url,xbrowseropts=https://gitlab.com/eqsoft/bootlinux,--start-fullscreen,--kiosk,--incognito,--noerrdialogs,--disable-translate,--no-first-run,--fast,--fast-start,--disable-infobars,--disable-features=TranslateUI```
-* full list of chromium commanline options: [text](https://peter.sh/experiments/chromium-command-line-switches/)
+* full list of chromium commanline options: [https://peter.sh/experiments/chromium-command-line-switches/](https://peter.sh/experiments/chromium-command-line-switches/)
 
 
 ### xpanel (0|1) ###
