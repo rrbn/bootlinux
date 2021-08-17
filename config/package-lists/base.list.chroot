@@ -7,7 +7,6 @@ isc-dhcp-client
 nano
 plymouth
 plymouth-themes
-python
 xorg
 dbus
 dbus-x11
@@ -29,3 +28,5 @@ xterm
 psmisc
 console-data
 console-setup
+chromium
+chromium-l10n
