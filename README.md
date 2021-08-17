@@ -46,7 +46,7 @@ A comma seperated list of options (depends on xbrowser paramater):
     * _full list of seb2 commanline options: [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)_
 
 * ```xbrowser=firefox xbrowseropts=-url,https://gitlab.com/eqsoft/bootlinux,-private```
-    * _full list of firefox commandline options: [https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)_
+    * _full list of firefox commandline options: [https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options](https://web.archive.org/web/20210530092017/https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)_
 
 * ```xbrowser=chromium xbrowseropts=-url,xbrowseropts=https://gitlab.com/eqsoft/bootlinux,--start-fullscreen,--kiosk,--incognito,--noerrdialogs,--disable-translate,--no-first-run,--fast,--fast-start,--disable-infobars,--disable-features=Translate```
     * _full list of chromium commanline options: [https://peter.sh/experiments/chromium-command-line-switches/](https://peter.sh/experiments/chromium-command-line-switches/)_
