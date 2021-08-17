@@ -1,6 +1,6 @@
 # bootlinux
 
-* A customizable webkiosk filesystem based on Debian-Live (Debian 10 / buster) and seb2 Kiosk-Browser [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)
+* A customizable webkiosk filesystem based on Debian-Live (Debian 11 / Bullseye) and seb2 Kiosk-Browser [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)
 
 ## Build Requirements (local) ##
 
