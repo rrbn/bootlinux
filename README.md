@@ -6,7 +6,6 @@
 
 * requires Linux "Debian 9 / stretch or Debian 10 / buster"
 * apt-get install live-build live-boot live-config build-essentials squashfs-tools syslinux
-* see reference Dockerfile: https://gitlab.com/eqsoft/bootlinux-docker/blob/buster/bootlinux/Dockerfile
 * execute ```./build.sh```
 
 ## Build Requirements (docker) ##
