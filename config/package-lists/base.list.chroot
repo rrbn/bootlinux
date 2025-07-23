@@ -1,6 +1,7 @@
 firmware-linux-free
 firmware-linux-nonfree
 libdbus-glib-1-2
+xserver-xorg-video-intel
 wget
 bzip2
 isc-dhcp-client
