@@ -20,7 +20,7 @@
 * Main build artefact (local and docker): ```binary/live/(filesystem.squashfs,initrd.img,vmlinuz)```
 * Main build artefact (gitlab-ci, manual trigger): ```https://gitlab.com/eqsoft/bootlinux/-/jobs/artifacts/buster-seb2/download?job=build```
 * To save some space the unused boot files vmlinuz and initrd.img are extracted from the filesystem.squashfs
-* The artefacts are tested in a syslinux environment with bios and uefi firmware like described here: [https://wiki.debian-fr.xyz/PXE_avec_support_EFI](https://wiki.debian-fr.xyz/PXE_avec_support_EFI)
+* The artefacts are tested in a syslinux environment with bios and uefi firmware like described here: [https://web.archive.org/web/20220523072110/https://wiki.debian-fr.xyz/PXE_avec_support_EFI](https://web.archive.org/web/20220523072110/https://wiki.debian-fr.xyz/PXE_avec_support_EFI)
 * After booting into the webkiosk linux the seb2 browser should start in an openbox-session
 
 ## Documentation
