@@ -1,10 +1,10 @@
 # bootlinux
 
-* A customizable webkiosk filesystem based on Debian-Live (Debian 11 / Bullseye) and seb2 Kiosk-Browser [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)
+* A customizable webkiosk filesystem based on Debian-Live (Debian 12 / Bookworm) and seb2 Kiosk-Browser [https://github.com/eqsoft/seb2](https://github.com/eqsoft/seb2)
 
 ## Build Requirements (local) ##
 
-* requires Linux "Debian 9 / stretch or Debian 10 / buster"
+* requires Linux "Debian"
 * apt-get install live-build live-boot live-config build-essentials squashfs-tools syslinux
 * execute ```./build.sh```
 
